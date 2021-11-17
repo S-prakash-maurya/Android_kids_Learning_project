@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:outlineSpotShadowColor="@color/purple_200"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="391dp"
+        android:layout_height="113dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/prev"
+            android:rotationX="0"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="98dp" />
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/prev"
+            android:background="@drawable/aa"
+
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="-47dp" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/imageSwitcher"
+            android:background="@drawable/nxt"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+    <com.example.kids_learning_project.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="411dp"
+        android:layout_height="362dp"
+        android:background="@drawable/componants_styles"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+
+                android:id="@+id/save_button"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paintView" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="248dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FCEF00"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/undo_button"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="undo"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paintView" />
+
+            <Button
+                android:id="@+id/redo_button"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="redo"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paintView" />
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Clear"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paintView" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
